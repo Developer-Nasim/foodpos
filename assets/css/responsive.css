@@ -7,6 +7,19 @@
 
 /* Normal screen :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
+    .nav-tabs .nav-link {        
+        margin-right: 20px; 
+    }
+    .order-infos,.order-wrp { 
+        max-width: 320px;
+        min-width: 320px;
+        padding: 25px 20px; 
+    }
+    .product-blk { 
+        padding: 20px;
+        padding-top: 0;
+    }
+
 
 
 }
@@ -14,6 +27,38 @@
  
 /* Tablet screen :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+    .nav-tabs .nav-link { 
+        margin-right: 20px; 
+        padding-bottom: 5px; 
+        margin-bottom: 15px;
+        padding-top: 0;
+    }
+    .top-blk {
+        flex-wrap: wrap;
+    }
+    
+    .top-blk form {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .order-infos,.order-wrp { 
+        max-width: 320px;
+        min-width: 320px;
+        padding: 25px 20px; 
+    }
+    .product-blk { 
+        padding: 20px;
+        padding-top: 0;
+    }
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -21,8 +66,128 @@
  
 /* small screen :320px. */
 @media (max-width: 767px) {
+    .heading-wrp h4 {
+        font-size: 25px; 
+    }
+    .nav-tabs .nav-link { 
+        margin-right: 18px; 
+    }
+    .order-infos, 
+    .order-wrp {
+        max-width: 320px;
+        min-width: 320px;
+        padding: 25px 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        height: 100vh;
+        margin-right: -400px;
+        transition: .3s;
+    }
+    .order-infos.siteBar, 
+    .order-infos.siteBar .order-wrp{
+        margin-right: 0;
+    }
+    .top-blk button.siteBar-btn {
+        background: none;
+        border: none;
+        font-size: 24px;
+        font-weight: 300;
+        position: absolute;
+        top: 35px;
+        right: 15px;
+    }
+    .top-blk { 
+        padding-right: 28px;
+    }
+    .order-wrp button.siteBar-btn {
+        padding: 0;
+        border: none;
+        background: none;
+        margin-left: auto;
+        margin-bottom: 5px;
+    }
 
+    .top-blk form input { 
+        min-width: 150px;
+        max-width: 150px;
+    }
+}
  
+/* small screen :320px. */
+@media (max-width: 555px) {
+    .nav-tabs .nav-link { 
+        margin-right: 20px; 
+        padding-bottom: 5px; 
+        margin-bottom: 15px;
+        padding-top: 0;
+    }
+    .top-blk {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .top-blk form {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .order-infos,.order-wrp { 
+        max-width: 320px;
+        min-width: 320px; 
+        padding: 25px 20px; 
+    }
+    .product-blk { 
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-wrp,.menus  { 
+        width: 70px; 
+        min-width: 70px; 
+        max-width: 70px;  
+        padding: 10px 0; 
+    }
+    .menus ul li a { 
+        width: 35px;
+        height: 35px; 
+        border-radius: 5px; 
+    }
+    .top-blk form input{
+        min-width: 100%;
+    }
+    .product-headings {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .product-headings .nice-select {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .menus-items {
+        padding: 10px;
+    }
+    .top-blk button.siteBar-btn { 
+        font-size: 28px; 
+        top: 22px;
+        right: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
  
 /* Large Mobile screen :480px. */
