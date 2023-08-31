@@ -114,7 +114,14 @@ li {
  img{
   max-width: 100%;
  }
-
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+     -webkit-appearance: none; 
+ } 
+ 
+ input[type=number]{
+     -moz-appearance: textfield;
+ }
  
 /* default-css END 
 ================================== */
@@ -301,8 +308,11 @@ input::placeholder {
   margin-top: 30px;
   padding: 30px;
   padding-top: 0;
+  transition: .3s;
 }
-
+.product-blk:hover{
+  transform: scale(1.1);
+}
 .product-blk img {
   display: block;
   margin: auto;
@@ -336,6 +346,10 @@ input::placeholder {
   background: #1F1D2B;
   z-index: -1;
   border-radius: 16px;
+  transition: .3s;
+}
+.product-blk:hover:after{
+  box-shadow: 5px 10px 16px #ffffff0f;
 }
 .nice-select {
   border-radius: 8px;
@@ -523,14 +537,20 @@ ul.delivery-status {
 .amounts button {
   border-radius: 8px;
   background: var(--primary-color, #EA7C69);
-  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.30);
+  box-shadow: 0px 5px 10px 0px rgba(234, 124, 105, 0.30);
   border: none;
   width: 100%;
   padding: 14px;
   font-weight: 600;
   font-size: 14px;
   margin-top: 60px;
+  transition: .3s;
 }
+.amounts button:hover{
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.30);
+}
+
+
 .menu-wrp {
   position: fixed;
   top: 0;
@@ -567,7 +587,52 @@ ul.delivery-status {
 .order-wrp::-webkit-scrollbar {
   width: 0px;
 }
+.applyDisc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
 
+.applyDisc span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ABBBC2;
+}
+
+.applyDisc form.discount_rate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.applyDisc form.discount_rate button {
+  margin: 0;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.applyDisc form.discount_rate input {
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--base-dark-line, #393C49);
+  background: var(--base-form-bg, #2D303E);
+  color: #fff;
+  text-align: center;
+}
+
+.multiple_act_btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.multiple_act_btns button {
+  max-width: 45%;
+  margin-top: 30px;
+}
 
 
 
